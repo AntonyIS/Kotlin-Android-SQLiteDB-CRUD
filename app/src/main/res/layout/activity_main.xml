@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/login_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/login"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"/>
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_edittext_style"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:hint="Names"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/etprofession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edittext_style"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_profession"
+            android:drawableLeft="@drawable/ic_profession"
+            android:drawablePadding="10dp"
+            android:hint="Profession"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/etresidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edittext_style"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_home"
+            android:drawableLeft="@drawable/ic_home"
+            android:drawablePadding="10dp"
+            android:hint="Residence"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorText"
+            android:background="@drawable/login_edittext_style"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+
+
+        <Button
+            android:id="@+id/btnsave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/button_style"
+            android:textColor="@color/colorText"
+            android:textSize="21sp"  />
+        <Button
+            android:id="@+id/btnview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:textAllCaps="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/button_style"
+            android:textColor="@color/colorText"
+            android:textSize="21sp"  />
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
