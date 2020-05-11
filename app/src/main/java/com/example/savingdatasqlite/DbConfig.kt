@@ -4,6 +4,7 @@ package com.example.savingdatasqlite
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper
 import android.content.ContentValues
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.widget.Toast
@@ -25,7 +26,6 @@ class DatabaseHelper(context: Context) :
         db.execSQL("CREATE TABLE $TABLE_NAME (ID INTEGER PRIMARY KEY " +
                 "AUTOINCREMENT,NAME TEXT,PROFESSION TEXT,RESIDENCE TEXT,PASSWORD TEXT)")
     }
-
     /**
      * Let's create Our onUpgrade method
      * Called when the database needs to be upgraded. The implementation should
@@ -36,7 +36,6 @@ class DatabaseHelper(context: Context) :
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
         onCreate(db)
     }
-
     /**
      * Let's create our insertData() method.
      * It Will insert data to SQLIte database.
@@ -54,7 +53,7 @@ class DatabaseHelper(context: Context) :
     /**
      * Let's create  a method to update a row with new field values.
      */
-    fun updateData(id: String, name: String, profession: String, residence: String, password:String):
+    fun updateData(id:String, name: String, profession: String, residence: String, password:String):
             Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()
@@ -63,17 +62,20 @@ class DatabaseHelper(context: Context) :
         contentValues.put(COL_4, residence)
         contentValues.put(COL_5, password)
         db.update(TABLE_NAME, contentValues, "ID = ?", arrayOf(id))
+        db.close()
         return true
     }
+
 
     /**
      * Let's create a function to delete a given row based on the id.
      */
-    fun deleteData(id : String){
+    fun deleteData(name:String){
         val db = this.writableDatabase
-        db.delete("users","ID=?", arrayOf(id))
+        db.delete("users","NAME"+"=?", arrayOf(name))
         return db.close()
     }
+
 
     /**
      * The below getter property will return a Cursor containing our dataset.

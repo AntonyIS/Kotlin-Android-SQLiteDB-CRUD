@@ -45,28 +45,7 @@ class MainActivity : AppCompatActivity() {
         btnview.setOnClickListener {
             startActivity(Intent(this,DataActivity::class.java))
         }
-//        view data from database
-//        btnview.setOnClickListener {
-////            use cursor to pull all data from the database
-//            val cursor = db.rawQuery("SELECT * FROM users", null)
-//
-////            check if there are any records from the database
-//            if (cursor.count == 0) {
-//                show_message("No records ", "Sorry no records were found !!")
-//            } else {
-////                use buffer to display data
-//                val buffer = StringBuffer()
-//                while (cursor.moveToNext()) {
-//                    buffer.append(cursor.getString(0) + "\n")
-//                    buffer.append(cursor.getString(1) + "\n")
-//                    buffer.append(cursor.getString(2) + "\n")
-//                    buffer.append(cursor.getString(3) + "\n")
-//                }
-//                show_message("USERS", buffer.toString())
-//            }
-//
-//
-//        }
+
     }
         //    message to diplay to the user
         private fun show_message(title: String, message: String) {
