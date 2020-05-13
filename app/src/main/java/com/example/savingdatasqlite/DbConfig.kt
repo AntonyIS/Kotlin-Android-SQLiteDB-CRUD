@@ -76,7 +76,6 @@ class DatabaseHelper(context: Context) :
         return db.close()
     }
 
-
     /**
      * The below getter property will return a Cursor containing our dataset.
      */
